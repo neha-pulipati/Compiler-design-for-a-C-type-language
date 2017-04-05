@@ -125,17 +125,22 @@ Some highlights of the grammar:
 6.	There is no variable declaration list. There is only one id_list in the global scope and that contains all the variables.
 7.	There is no type specified for variables. All variables are INT by default.
 8.	All terminals are written in capital in the grammar and are as defined in the previous projects (except the PRINT keyword)
-Execution Semantics
+
+Execution Semantics:
+
 All statements in a statement list are executed sequentially according to the order in which they appear. Exception is made for body of if_stmt, while_stmt and switch_stmt as explained below.
-Boolean Condition
+
+Boolean Condition:
 A boolean condition takes two operands as parameters and returns a boolean value. It is used to control the execution of while and if statements.
-If Statements
+
+If Statements:
 An if_stmt has the following (standard) semantics (note that our language does not have an else clause to the if_stmt):
 1.	The condition is evaluated.
 2.	If the condition evaluates to true, then the body of the if_stmt is executed, then the next statement following the if_stmt is executed.
 3.	If the condition evaluates to false, then the next statement following the if_stmt is executed.
 These semantics apply recursively to nested if_stmt.
-While Statements
+
+While Statements:
 while_stmt has the following (standard) semantics:
 1.	The condition is evaluated.
 2.	If the condition evaluates to true, the body of the while_stmt is executed, then goto step 1.
@@ -153,7 +158,8 @@ label:
     goto label
   }     
 Note that goto statements do not appear in the input program, but our intermediate representation includes a GotoStatementwhich is used in conjunction with an IfStatement to represent while and switch statements.
-Switch Statements
+
+Switch Statements:
 switch_stmt has the following (standard) semantics:
 1.	The value of the switch variable is checked against each case number in order.
 2.	If the value matches the case number, the body of the case is executed, then the next statement following the switch_stmt is executed.
@@ -200,11 +206,12 @@ Print statement
 The statement:
 print a;
 prints the value of the variable a at the time of the execution of the print statement.
-How to generate the code
+
+How to generate the code:
 The intermediate code will be a data structure (a graph) that is easy to interpret and execute. All intermediate representation data structures are defined in compiler.h, and you are not allowed to change compiler.h or compiler.c, which are posted on the submission site.
 You should become very familiar with the intermediate representation data structures in compiler.h and their usage to execute the program in the execute_program function in compiler.c.
 We will start with describing the graph for assignments, then extend this to while statements. You should read this whole explanation.
-Handling simple assignments
+Handling simple assignments:
 A simple assignment is fully determined by: the operator (if any), the id on the left-hand side, and the operand(s). A simple assignment can be represented as a node:
 struct AssignmentStatement {
     struct ValueNode* left_hand_side;
