@@ -9,10 +9,6 @@ This is a small compiler that will read an input program and represents it in an
 3.	How to generate the intermediate representation Explains step by step how to generate the intermediate representation (data structure). You should read this sequentially and not skip around.
 4.	Executing the intermediate representation You are only allowed to use the code we provide to execute the intermediate representation.
 5.	Input/Output Reminds you to only use standard input and output.
-6.	Requirements Lists the programming languages allowed and other requirements.
-7.	Submission Instructions for submitting your project.
-8.	Grading Describes the grading scheme.
-9.	Bonus Project Describes the requirements for the bonus project.
 
 Grammar:
 The grammar for this project is a simplified form of the grammar from the previous project, but there are a couple extensions.
