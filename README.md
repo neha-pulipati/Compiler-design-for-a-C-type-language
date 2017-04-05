@@ -1,7 +1,7 @@
 # Compiler-design-for-a-C-type-language
 
-Introduction
-A small compiler that will read an input program and represents it in an internal data structure. The data structure will contain representation of instructions to be executed as well as a part that represents the memory of the program (space for variables). Then your compiler will execute the data structure (interpret it). This means that the program will traverse the data structure and at every node it visits, it will execute the node by changing appropriate memory locations and deciding what is the next instruction to execute (program counter). The output of your compiler is the output that the input program should produce. These steps are illustrated in the following figure:
+Introduction:
+This is a small compiler that will read an input program and represents it in an internal data structure. The data structure will contain representation of instructions to be executed as well as a part that represents the memory of the program (space for variables). Then your compiler will execute the data structure (interpret it). This means that the program will traverse the data structure and at every node it visits, it will execute the node by changing appropriate memory locations and deciding what is the next instruction to execute (program counter). The output of your compiler is the output that the input program should produce. These steps are illustrated in the following figure:
 
  The remainder of this document is organized as follows:
 1.	Grammar Defines the programming language syntax including grammar.
@@ -14,7 +14,7 @@ A small compiler that will read an input program and represents it in an interna
 8.	Grading Describes the grading scheme.
 9.	Bonus Project Describes the requirements for the bonus project.
 
-Grammar
+Grammar:
 The grammar for this project is a simplified form of the grammar from the previous project, but there are a couple extensions.
 program → var_section body
 var_section → id_list SEMICOLON
