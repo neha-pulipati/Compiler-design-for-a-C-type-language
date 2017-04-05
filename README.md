@@ -429,6 +429,7 @@ while (pc != NULL)
                          pc = pc->next
     }
 }
+
 Implementation
 We have provided you with the data structures and the code to execute the graph and you must use it. There are two files compiler.h and compiler.c, you need to write your code in separate file(s)and include compiler.h. The entry point of your code is a function declared in compiler.h:
 struct StatementNode* parse_generate_intermediate_representation();
@@ -444,11 +445,5 @@ int main()
 It calls the function that you will implement which is supposed to parse the program and generate the intermediate representation, then it calls the execute_program function to execute the program. You should not modify any of the given code. You should only submit the file(s) that contain your own code, and we will add the given part and compile the code before testing.
 Input/Output
 As in the previous project, the input will be read from standard input. We will test your programs by redirecting the standard input to an input file. You should NOT specify a file name from which to read the input. Output should be written to standard output.
-Requirements
-1.	Write a compiler that generates intermediate representation for the code.
-2.	Language: You can use C or C++ for this assignment.
-3.	Platform: As previous projects, the reference platform is CentOS
-a.	
-4.	You can assume that there are no syntax or semantic errors in the input program.
 
 
